@@ -1,0 +1,251 @@
+.wrapper {
+	width: 100%;
+}
+
+.text_white {
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.32px;
+}
+
+.text_gray {
+	color: #9ea3b4;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.28px;
+}
+
+.body_projects {
+	position: relative;
+}
+
+.popup_wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: rgba(46, 50, 66, 0.64);
+	z-index: 10;
+}
+
+.body_projects_popup {
+	background: #757ca4;
+	width: 600px;
+	margin: 10px auto;
+	padding: 30px 10px;
+	border-radius: 10px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	& h2 {
+		color: #fff;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	& .body_projects_popup_form {
+		display: flex;
+		flex-direction: column;
+		padding: 0 40px;
+		color: #fff;
+	}
+}
+
+input[name="title"] {
+	margin-left: 67px;
+}
+input[name="company"] {
+	margin-left: 22px;
+}
+input[name="cost"] {
+	margin-left: 64px;
+}
+input[name="deadline"] {
+	margin-left: 28px;
+}
+input[name="status"] {
+	margin-left: 48.5px;
+}
+select[name="status"] {
+	margin-left: 49px;
+}
+input[name="progress"]{
+	margin-left: 29.5px;
+}
+input[name="timeSpent"]{
+	margin-left: 12px;
+}
+
+input[name="title"], input[name="company"],
+input[name="cost"],  input[name="deadline"],
+input[name="status"], select[name="status"],
+input[name="progress"],  input[name="timeSpent"] {
+	margin-bottom: 10px;
+	width: 350px;
+	padding: 7px;
+	border-radius: 5px;
+	outline: none;
+	border: 1px solid #fff;
+}
+
+input[type="submit"] {
+	width: 200px;
+	margin: 5px auto;
+	padding: 10px 0;
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	background: #757ca4;
+	color: #fff;
+	font-size: 18px;
+	transition: all .2s;
+	&:hover {
+		background: #63698d;
+	}
+}
+
+.body_projects_table {
+	width: 95%;
+	margin: 0 auto;
+	& .table_head > th{
+		color: #9ea3b4;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		font-weight: 400;
+		letter-spacing: 0.32px;
+		padding-top: 57px;
+		padding-bottom: 20px;
+		text-align: left;
+		&:first-child {
+			padding-left: 52px;
+		}
+		&:nth-child(5) {
+			width: 200px;
+		}
+	}
+
+	& .table_content {
+		height: 117px;
+		border-radius: 5px;
+		background-color: #3a3e52;
+		margin-bottom: 24px;
+
+		& > td {
+			border-bottom: 24px solid #2e3242;
+
+		}
+	}
+
+	& .project_table-item {
+		padding-right: 20px;
+		position: relative;
+	}
+
+	& .color_detector_left {
+		position: absolute;
+		width: 4px;
+		height: 93px;
+		background-color: #2196f3;
+		top: 0;
+		left: -4px;
+		border-bottom-left-radius: 4px;
+		border-top-left-radius: 4px;
+	}
+
+	& .project_table-item_title {
+		padding-left: 52px;
+	}
+
+	& .project_table-item_company {
+		padding-left: 52px;
+	}
+
+	& .project_table-item_progress {
+		display: flex;
+		align-items: center;
+		width: 285px;
+		justify-content: flex-end;
+	}
+
+	& .project_table-item_progress-scale {
+		width: 237px;
+		height: 8px;
+		border-radius: 4px;
+		background-color: rgba(158, 163, 180, .3);
+		margin-left: 16px;
+		position: relative;
+		& .project_table-item_progress-scale_before {
+			width: 40%;
+			height: 8px;
+			border-radius: 4px;
+			background-color: #2196f3;
+			position: absolute;
+		}
+	}
+
+	& .project_table-item_assigned {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		& .project_table-item_assigned_avatar {
+			width: 42px;
+			height: 42px;
+			border-radius: 50%;
+			background: #c4c4c4;
+			margin-right: 25px;
+			& > img {
+				width: 100%;
+			}
+		}
+
+		& .project_table-item_assigned_settings {
+			position: absolute;
+			right: 0;
+			padding: 4px;
+			cursor: pointer;
+			transition: all .3s;
+			&:hover img {
+	            transition: all .3s;
+				-moz-transform: rotate(180deg); /* Для Firefox */
+				-ms-transform: rotate(180deg); /* Для IE */
+				-webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
+				-o-transform: rotate(180deg); /* Для Opera */
+				transform: rotate(180deg);
+				height: 20px;
+		}
+		}
+
+		& .project_table-item_assigned_popup {
+			position: absolute;
+			background: #2e3241;
+			padding: 15px 30px 15px 30px;
+			color: #fff;
+			font-size: 20px;
+			border-radius: 5px;
+			transition: all .2s;
+		}
+
+
+
+		& .project_table-item_assigned_popup_update {
+			margin-bottom: 9px;
+			cursor: pointer;
+			&:hover {
+				text-shadow: 0 0 10px #fff;
+			}
+		}
+
+		& .project_table-item_assigned_popup_remove {
+			cursor: pointer;
+			&:hover {
+				text-shadow: 0 0 10px #fff;
+			}
+		}
+	}
+}
